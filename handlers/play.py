@@ -87,12 +87,12 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
     os.remove("background.png")
 
 
-# ==================================EfsaneVaves======================================================== 
+# ==================================BallasVaves======================================================== 
 @Client.on_callback_query(filters.regex("cls"))
 async def cls(_, query: CallbackQuery):
     await query.message.delete()
 
-# EfsaneMusicVaves düzenlenmiştir.
+# BallasMusicVaves düzenlenmiştir.
 
 @Client.on_message(command(["play", "oynat"]) 
                    & filters.group
@@ -109,7 +109,7 @@ async def play(_, message: Message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name = "EfsaneMusicVaves"
+        user.first_name = "BallasMusicVaves"
     usar = user
     wew = usar.id
     try:
@@ -152,7 +152,7 @@ async def play(_, message: Message):
 
         file_name = get_file_name(audio)
         title = file_name
-        thumb_name = "https://i.ibb.co/Qkz78hx/images-1.jpg"
+        thumb_name = "https://i.ibb.co/Fx7J4MH/Logopit-1663987970479.png"
         thumbnail = thumb_name
         duration = round(audio.duration / 60)
         views = "Yerel olarak eklendi"
@@ -198,8 +198,8 @@ async def play(_, message: Message):
             keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("📚 Bilgi", url=f"https://t.me/efsanestar_bot"),
-                InlineKeyboardButton("📮 Kanal", url=f"https://t.me/Sohbetdestek"),
+                InlineKeyboardButton("📚 Bilgi", url=f"https://t.me/Ballasplayerbot"),
+                InlineKeyboardButton("📮 Kanal", url=f"https://t.me/Ballasticaret"),
             ],[
                 InlineKeyboardButton("✨ Kapat", callback_data="cls"),
             ],
@@ -207,7 +207,7 @@ async def play(_, message: Message):
     )
         except Exception as e:
             title = "NaN"
-            thumb_name = "https://i.ibb.co/Qkz78hx/images-1.jpg"
+            thumb_name = "https://i.ibb.co/Fx7J4MH/Logopit-1663987970479.png"
             duration = "NaN"
             views = "NaN"
             keyboard = InlineKeyboardMarkup(
@@ -263,8 +263,8 @@ async def play(_, message: Message):
         keyboard = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton("📚 Bilgi", url=f"https://t.me/efsanestar_bot"),
-                InlineKeyboardButton("📮 Kanal", url=f"https://t.me/Sohbetdestek"),
+                InlineKeyboardButton("📚 Bilgi", url=f"https://t.me/Ballasplayerbot"),
+                InlineKeyboardButton("📮 Kanal", url=f"https://t.me/Ballasticaret"),
             ],[
                 InlineKeyboardButton("✨ Kapat", callback_data="cls"),
             ],
